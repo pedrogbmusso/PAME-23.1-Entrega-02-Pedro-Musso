@@ -1,0 +1,186 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+    font-family: sans-serif;
+    margin: 0;padding: 0;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    background-image: url(https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd6e4492c-6b1e-41e5-b68a-9f930d471438%2FFoto_Fluxo.jpg?id=f17b0069-5e8f-4fec-8023-634869802ba0&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=2000&userId=&cache=v2),linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(10, 4, 4, 0.96));
+    }
+
+    
+.cabecalho{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+}
+.cabecalho input [type = submit]{
+    cursor: pointer;
+    height: 100%;
+    width: 5%;
+    background-image:url(https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F722a333e-3146-48fc-860b-26c751a2e1f1%2FSpotify-Icon.png?id=af3a8c15-4614-44de-b5fb-47728ecd3ae1&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=1020&userId=&cache=v2);
+}
+    .principal{
+        max-width:600px;
+        width: 50%;
+        height: fit-content;
+        background-color: black;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+    }
+    .principal h1{
+        text-align: center;
+        color: white;
+    }
+    .principal input[type = submit]{
+        width: 50%;
+        height: 10%;
+        border-radius: 60px;
+        cursor: pointer;
+        color: white;
+        background-color:black ;
+        margin: 1px;
+    }
+    .principal input[type = text],
+    .principal input[type = email]{
+        width: 50%;
+        height: 15%;
+        max-height: 60px;
+        border-radius: 5px;
+    }
+    .principal input[type = text],
+    .principal input[type = password]{
+        width: 50%;
+        height: 15%;
+        max-height: 60px;
+        border-radius: 5px;
+    }
+    .principal h5{
+        color: rgb(120, 120, 120);
+        text-align: left;
+    }
+
+    .principal a{
+        color: white;
+        font-size: 10px;
+    }
+
+    .principal .Cadastro{
+        color: white;
+    }
+
+.toggle{
+    margin-bottom: 20px;
+}
+
+.toggle > input {
+    display: none;
+}
+
+.toggle > label {
+    position: relative;
+    display: block;
+    height: 28px;
+    width: 52px;
+    background-color: #f7f7f7;
+    border: 1px #a2e3e6 solid;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.toggle > label:after {
+    flex-direction: row;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+.toggle > label:active:after {
+    transform: scale(1.15, 0.85);
+}
+.toggle > input:checked ~ label {
+    background-color: #4cda64;
+    border-color: #4cda64;
+}
+.toggle > input:checked ~ label:after {
+    left: 25px;
+}
+.toggle > input:disabled ~ label {
+    background-color: #d5d5d5;
+    pointer-events: none;
+}
+.toggle > input:disabled ~ label:after {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+    .popup{
+        width: 30%;
+        height: 30%;
+        background-color: #4cda64;
+        display: none;
+        position: absolute;
+    }
+
+</style>
+<body>
+    <div class="cabecalho">
+        <input type="submit" nome = "Inicio" value="Spotfluxo" id = "Inicio"/>
+    </div>
+    <div id="popup" class="popup">
+        <p>Suas informações de login são \n email \n senha</p>
+        <input type="button" nome="continuar" value="aperte para continuar"/>
+    </div>
+    <div class="principal">
+        <H1>Entrar no Spotfluxo</H1>
+        <input type="submit" nome = "Google" value="Continuar com o google"/>
+        <input type="submit" nome = "Facebook" value="Continuar com o Facebook"/> 
+        <input type="submit" nome = "Apple" value="Continuar com a Apple"/>
+        <input type="submit" nome = "telefone" value="Continuar com numero de telefone"/>
+        <h5>email ou nome de usuario</h5>
+        <input type="text" nome="email" placeholder="Email ou nome de usuario"/>
+        <h5>senha</h5>
+        <input id="password" type="password" nome="senha" placeholder="Senha" />
+        colcar funcao de 20 > senha > 3
+        <div class="toggle">
+            <h5>lembrar de mim</h5>
+            <input type="checkbox" id="foo">
+            <label for="foo"></label>
+        </div>
+        <input type="submit" nome = "login" value="Enviar"/>
+        <a href="link de referencia para esqueci minha senha">Esqueceu a senha?</a>
+        <a href="link de referencia para esqueci minha senha">Inscreva-se no Spotfluxo</a>
+    </div>
+<script>
+    
+    function abrir(){
+        document.getElementById('popup').style.display = 'block';
+        aperte enter para continuar
+        fechar popup
+
+    }
+
+</script>
+</body>
+</html>
+
+
