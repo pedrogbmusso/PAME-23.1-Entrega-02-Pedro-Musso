@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotfluxo</title>
 </head>
 <style>
 
@@ -11,31 +11,44 @@
     display: flex;
     flex-direction: column;
     display: flex;
-    background-image: url(https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd6e4492c-6b1e-41e5-b68a-9f930d471438%2FFoto_Fluxo.jpg?id=f17b0069-5e8f-4fec-8023-634869802ba0&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=2000&userId=&cache=v2),linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(10, 4, 4, 0.96));
+    background-image: url("https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd6e4492c-6b1e-41e5-b68a-9f930d471438%2FFoto_Fluxo.jpg?id=f17b0069-5e8f-4fec-8023-634869802ba0&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=2000&userId=&cache=v2");
     }
 
     
 .cabecalho{
     width: 100%;
     height: 10%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
-.cabecalho input [type = submit]{
+.cabecalho button{
     cursor: pointer;
     height: 100%;
-    width: 5%;
-    background-image:url(https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F722a333e-3146-48fc-860b-26c751a2e1f1%2FSpotify-Icon.png?id=af3a8c15-4614-44de-b5fb-47728ecd3ae1&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=1020&userId=&cache=v2);
+    width: 10%;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-size: medium;
+    border-color: black
 }
+    .cabecalho img{
+        width: 40px;
+        border-radius: 20px;
+        background-color: white;
+
+    }
+
     .principal{
         max-width:600px;
         width: 50%;
         height: fit-content;
-        background-color: black;
+        background-color:black;
         position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        text-align:justify;
         left: 50%;
         top: 55%;
         transform: translate(-50%,-50%);
@@ -52,7 +65,8 @@
         cursor: pointer;
         color: white;
         background-color:black ;
-        margin: 1px;
+        margin: 2px;
+        font-family: sans-serif;
     }
     .principal input[type = text],
     .principal input[type = email]{
@@ -80,6 +94,19 @@
 
     .principal .Cadastro{
         color: white;
+    }
+
+    .principal button{
+        width: 50%;
+        height: 15%;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+    }
+    .principal img{
+        width: 20px;
+        border-radius: 20px;
+        background-color: black;
     }
 
 .toggle{
@@ -133,50 +160,36 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-    .popup{
-        width: 30%;
-        height: 30%;
-        background-color: #4cda64;
-        display: none;
-        position: absolute;
-    }
-
 </style>
 <body>
     <div class="cabecalho">
-        <input type="submit" nome = "Inicio" value="Spotfluxo" id = "Inicio"/>
-    </div>
-    <div id="popup" class="popup">
-        <p>Suas informações de login são \n email \n senha</p>
-        <input type="button" nome="continuar" value="aperte para continuar"/>
+        <button><img id = "spotiy" src = "https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F722a333e-3146-48fc-860b-26c751a2e1f1%2FSpotify-Icon.png?id=af3a8c15-4614-44de-b5fb-47728ecd3ae1&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=1020&userId=&cache=v2"> Spotfluxo</button>
     </div>
     <div class="principal">
         <H1>Entrar no Spotfluxo</H1>
-        <input type="submit" nome = "Google" value="Continuar com o google"/>
-        <input type="submit" nome = "Facebook" value="Continuar com o Facebook"/> 
-        <input type="submit" nome = "Apple" value="Continuar com a Apple"/>
-        <input type="submit" nome = "telefone" value="Continuar com numero de telefone"/>
+        <button><img src="https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faf28affd-068d-4e07-969a-e804a93c93a9%2FGoogle-Icon.png?id=7bd9fc54-60ee-4d50-9572-dea66b305942&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=1020&userId=&cache=v2">Continuar com o google</button>
+        <button><img src="https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F16849521-dd96-41f1-b269-0a1aecb5d17c%2FFacebook-Icon.png?id=a0841cfc-a1eb-41d0-b112-fb6e526a79d3&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=1020&userId=&cache=v2" id = "Facebook">Continuar com o Facebook</button> 
+        <button><img src="https://power-reptile-d0b.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc9c2e10c-8d35-4297-9a5e-c3cb9b93e921%2FApple-Icon.png?id=7f8d1585-d472-4a73-b595-f85b7cda0d7b&table=block&spaceId=5b4c7f6a-6b90-428f-bb60-8aefe0ce809e&width=1020&userId=&cache=v2" id = "Apple">Continuar com a Apple</button>
+        <button>Continuar com numero de telefone</button>
         <h5>email ou nome de usuario</h5>
-        <input type="text" nome="email" placeholder="Email ou nome de usuario"/>
+        <input id = "email" type="text" nome="email" value="" placeholder="Email ou nome de usuario"/>
         <h5>senha</h5>
-        <input id="password" type="password" nome="senha" placeholder="Senha" />
-        colcar funcao de 20 > senha > 3
+        <input id="password" type="password" value="" nome="senha" placeholder="Senha" />
         <div class="toggle">
             <h5>lembrar de mim</h5>
             <input type="checkbox" id="foo">
             <label for="foo"></label>
         </div>
-        <input type="submit" nome = "login" value="Enviar"/>
+        <button onclick = "abrir()">Enviar</button>
         <a href="link de referencia para esqueci minha senha">Esqueceu a senha?</a>
         <a href="link de referencia para esqueci minha senha">Inscreva-se no Spotfluxo</a>
     </div>
 <script>
     
     function abrir(){
-        document.getElementById('popup').style.display = 'block';
-        aperte enter para continuar
-        fechar popup
-
+        var emailCadastro = document.getElementById("email").value;
+        var senhaCadastro = document.getElementById("password").value;
+        alert(`Seu email de cadastro sera: ${emailCadastro} e sua senha será: ${senhaCadastro}`)
     }
 
 </script>
